@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>View All</title>
+        <link rel="stylesheet" href="../static/css/empstyle.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="user">Home</a></li>
+            </ul>
+        </nav>
+        <h1>Employee Details</h1>
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>userid</th>
+                    <th>name</th>
+                    <th>email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in sqldata %}
+                <tr>
+                    <td>{{ row.userid }}</td>
+                    <td>{{ row.name }}</td>
+                    <td>{{ row.email }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+         </table>
+    </body>
+</html>
